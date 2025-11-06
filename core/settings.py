@@ -90,20 +90,35 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',  # nombre de tu base de datos
-        'USER': 'postgres.tfzjvhgwpfnqpxcnnegt',
-        'PASSWORD': os.environ.get("SUPABASE_PASS"),
-        'HOST': os.environ.get("SUPABASE_HOST"),
-        'PORT': '6543',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'magali_magali',
+        'USER': 'root',
+        'PASSWORD': 'zaunita25',
+        'HOST': 'localhost',
+        'PORT': '3306',
         'OPTIONS': {
-            'sslmode': 'require',
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
     }
 }
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',  # nombre de tu base de datos
+#         'USER': 'postgres.tfzjvhgwpfnqpxcnnegt',
+#         'PASSWORD': os.environ.get("SUPABASE_PASS"),
+#         'HOST': os.environ.get("SUPABASE_HOST"),
+#         'PORT': '6543',
+#         'OPTIONS': {
+#             'sslmode': 'require',
+#         },
+#     }
+# }
 
 
 
