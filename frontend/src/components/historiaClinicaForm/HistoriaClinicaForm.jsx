@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { createHistoriaClinica } from '../../api/historias.api';
-// IMPORTANTE: Necesitas estas APIs para llenar los selectores (dropdowns)
-// Asumo que tienes APIs de catálogo:
+import { getTratamientos, getPiezasDentales, getCarasDentales } from '../../api/catalogos.api';
+// IMPORTANTE: APIs importadas desde catalogos.api.js para llenar los selectores (dropdowns):
 
 import styles from './HistoriaClinicaForm.module.css'; // Debes crear este archivo CSS
 
